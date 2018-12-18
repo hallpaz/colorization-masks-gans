@@ -11,7 +11,9 @@ This project was developed as a conclusion work for the course *<a href="http://
 #### Keynote presentation:
 
 You'll find embedded below the keynote presented 
-<iframe src="https://www.icloud.com/keynote/0Wyocnu0kmSktCDVyBD7OOWEQ?embed=true" width="100%" height="100%" frameborder="0" style="position:absolute;top:0;left:0;" allowfullscreen="1" referrer="no-referrer"></iframe>
+<iframe src="https://www.icloud.com/keynote/0Wyocnu0kmSktCDVyBD7OOWEQ?embed=true" width="640" height="500" frameborder="0" allowfullscreen="1" referrer="no-referrer"></iframe>
+
+> Presentation may be updated, in relation to that presented during the course, to fix typos, be more coherent with this website and/or complete references and images.
 
 #### Source code
 
@@ -40,6 +42,11 @@ We can find tool which can color images restricted to some hints, like the most 
 
 Compute the best colorization given these restrictions or attending these criteria.
 
+Work with histograms seems an interesting proposal due to the fact that a histogram is an statistic measure of the image and we could think about learning some transformations over this metric. 
+
+## Neural networks and colorization
+
+
 # Goal 
 
 With some knowledge about the problems attacked on the area and the idea of making something with a potential artistic style, we'd like to get results somewhat near to images of partial colorization. That is colorization with a spatial control, so we could achieve an artistic result like that presented in images XXXXXX.
@@ -50,16 +57,20 @@ With some knowledge about the problems attacked on the area and the idea of maki
 
 After studying many projects about colorization with deep learning, we decided to approach the problem using Generative Adversarial Networks (GANs). We encountered some very good results in other works which didn't use GANs, particularly XXXXX (galera Efros) e XXXXX (harmonization). The former doesn't address the colorization problem specifically, but in the way of trying to harmonize the the style (and the colors) of a piece of image attached to another one, developed some ideias that could be useful. The problem is we didn't figure out an simple way to experiment spatial control in the architectures presented these works. Besides that these works had some sophisticated steps which could need more time to do right than we could provide for the project. 
 
-To incorporate spatial control in the colorization made using GANs, we tried to follow the ideia of Conditional GANs, changing the network to receive as input not only a grayscale image but also a binary image which would act as a mask, trying to teach the network to color only the region where the pixels had a no zero value. 
+We based our solution on the code available in [XXXX] (network architecture) and in [XXXX] (training organization). The generator  architecture is composed of XXXXXXXX.
 
+![U-Net architecture of the generator network](https://github.com/hallpaz/Image-Colorization/blob/master/asset/unet.png)
 
-Estratégia 1
-1. Aproveitar um trabalho de transferência de estilo e modificar a função de perda de estilo para tentar preservar silhuetas e modificar cor
-2. Explorar histograma - non spatial information
-3. Histogram Matching
-4. Efeito amarronzado, sépia (brown-is) L2 metric over color space
+We saw some works where the discriminator network was trained using some famous network as baseline, for example VGG-16. In [XXXXX] they built their own model for the discriminator and we chose to use this model which has an architecture that resembles that of the generator, but only the encondig side, leading to an output of the probability that the image taken from the generator is classified as a fake.
 
-Estratégia 2:
+![Discriminator network architecture](http://via.placeholder.com/640x360)
+ 
+
+To incorporate spatial control in the colorization made using GANs, we tried to follow the ideia of Conditional GANs, changing the network to receive as input not only a grayscale image but also a binary image which would act as a mask. With this approach we expected to teach the network to color only the regions where the pixels had a non-zero value. 
+
+![Generator modified](http://via.placeholder.com/640x360)
+
+As we weren't sure if this approach would prove itself promising, we tested our hypothesis over the XXXX dataset, training XXXX images with a single synthetic mask, an image divided vertically. We expected the network to learn how to generate images half in color and half in grayscale. Unfortunately, this didn't work, as the network began to generate images completely colored, less saturated,  but with a very visible line where it was the hard division of the mask.
 
 
 ## Considerations
@@ -77,4 +88,3 @@ change optimization metric (small change)
 Image style transfer using convolutional neural networks
 LA Gatys, AS Ecker, M Bethge
 Proceedings of the IEEE Conference on Computer Vision and Pattern
-
