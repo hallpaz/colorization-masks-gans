@@ -1,3 +1,4 @@
+
 # About this work
 
 This works addresses the problem of automatic image colorization using deep learning techniques. We explore a way of generating colored images from grayscale images with some degree of spatial control, so we could get partial colored images with an artistic effect if desired.
@@ -9,9 +10,13 @@ This project was developed as a conclusion work for the course *<a href="http://
 
 #### Keynote presentation:
 
-You'll find embedded below the keynote presented on the last class of the course.
+You'll find embedded below the keynote presented 
+<iframe src="https://www.icloud.com/keynote/0Wyocnu0kmSktCDVyBD7OOWEQ?embed=true" width="100%" height="100%" frameborder="0" style="position:absolute;top:0;left:0;" allowfullscreen="1" referrer="no-referrer"></iframe>
 
-<iframe src="https://www.icloud.com/keynote/0Wyocnu0kmSktCDVyBD7OOWEQ?embed=true" width="640" height="500" frameborder="0" allowfullscreen="1" referrer="no-referrer"></iframe>
+#### Source code
+
+The source code for this project is available at this <a target="_blank">Github repository</a>. The dataset used for training is XXXXXXX.
+
 
 # Inspirations
 
@@ -43,23 +48,9 @@ With some knowledge about the problems attacked on the area and the idea of maki
 
 # Our approach
 
-- 
+After studying many projects about colorization with deep learning, we decided to approach the problem using Generative Adversarial Networks (GANs). We encountered some very good results in other works which didn't use GANs, particularly XXXXX (galera Efros) e XXXXX (harmonization). The former doesn't address the colorization problem specifically, but in the way of trying to harmonize the the style (and the colors) of a piece of image attached to another one, developed some ideias that could be useful. The problem is we didn't figure out an simple way to experiment spatial control in the architectures presented these works. Besides that these works had some sophisticated steps which could need more time to do right than we could provide for the project. 
 
-Optimizations
-- Com tantas opções, o que escolher?
-- Life is a NP Complete problem
-- We also can Feed forward + back propagation (sometimes)
-
-- Interessante
-- Explorar os conhecimentos apresentados no curso
-- Adição ao que já foi feito
-- Factível dentro do tempo que resta
-
-Estratégias Gerais
-
-- Regressão
-- Classificação
-- GANs
+To incorporate spatial control in the colorization made using GANs, we tried to follow the ideia of Conditional GANs, changing the network to receive as input not only a grayscale image but also a binary image which would act as a mask, trying to teach the network to color only the region where the pixels had a no zero value. 
 
 
 Estratégia 1
@@ -69,6 +60,17 @@ Estratégia 1
 4. Efeito amarronzado, sépia (brown-is) L2 metric over color space
 
 Estratégia 2:
+
+
+## Considerations
+
+change optimization metric (small change)
+
+
+
+# Conclusions and next steps
+
+
 
 # References
 
