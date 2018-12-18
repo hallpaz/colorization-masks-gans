@@ -9,9 +9,9 @@ This project was developed as a conclusion work for the course *<a href="http://
 
 #### Keynote presentation:
 
-You'll find embedded below the keynote presented 
-<iframe src="https://www.icloud.com/keynote/0Wyocnu0kmSktCDVyBD7OOWEQ?embed=true" width="50%" height="50%" frameborder="0" style="position:absolute;top:0;left:0;" allowfullscreen="1" referrer="no-referrer"></iframe>
+You'll find embedded below the keynote presented on the last class of the course.
 
+<iframe src="https://www.icloud.com/keynote/0Wyocnu0kmSktCDVyBD7OOWEQ?embed=true" width="640" height="500" frameborder="0" allowfullscreen="1" referrer="no-referrer"></iframe>
 
 # Inspirations
 
