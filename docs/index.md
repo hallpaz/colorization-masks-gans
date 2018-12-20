@@ -132,7 +132,6 @@ After these experiments we'll have enough information to draw robust conclusions
 
 # References
 
-#### TODO: FIX ALL REFERENCES
 
 1. Gatys, Leon A., Alexander S. Ecker and Matthias Bethge. “Image Style Transfer Using Convolutional Neural Networks.” _2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)_ (2016): 2414-2423.
 2. [Erik Reinhard , Michael Ashikhmin , Bruce Gooch , Peter Shirley, Color Transfer between Images, IEEE Computer Graphics and Applications, v.21 n.5, p.34-41, September 2001](https://dl.acm.org/citation.cfm?id=618848) [doi>[10.1109/38.946629](https://dx.doi.org/10.1109/38.946629)]
