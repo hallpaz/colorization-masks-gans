@@ -69,7 +69,7 @@ We based our solution on the code available in 3 different repositories on the G
 
 <figure>
 <img src='https://github.com/hallpaz/Image-Colorization/blob/master/asset/unet.png?raw=true' alt='Images with partial colorization'/>
-<figcaption>Figure 5: [THIS IMAGE WILL BE MODIFIED U-Net architecture of the generator network]</figcaption> 
+<figcaption>Figure 5: U-Net architecture of the generator network [Illustration from (Han, 2018)] </figcaption> 
 </figure>
 
 We read some works where the discriminator network was trained using some pre-trained network as baseline, for example VGG-16. In (Zaneri, 2018) they built their own model for the discriminator and we chose to use this model which has an architecture that resembles that of the generator, but only the encoding side, leading to an output of the probability that the image taken from the generator is classified as a fake.
